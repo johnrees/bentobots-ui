@@ -16,6 +16,13 @@ div.preview {
   background: #EEE;
 }
 
+circle.inport {
+  fill: #29ADFF;
+}
+circle.outport {
+  fill: #FFEC27;
+}
+
 svg {
   display: block;
   width: 100vw;
@@ -23,12 +30,57 @@ svg {
   cursor: -webkit-grab;
 }
 
+#join {
+  fill: none;
+  stroke: #FFEC27;
+}
+
+// @keyframes example {
+//   0% {fill: pink;}
+//   50% {fill: red;}
+//   100% {fill: pink;}
+// }
+
+g rect {
+  fill: red;
+  // transition: fill 0.1s;
+}
+
+g.ran rect {
+  // animation-name: example;
+  // animation-duration: 1s;
+}
+
 path.edge {
-  stroke: #03E34C;
+  stroke: #FFEC27;
   stroke-width: 10px;
   stroke-dashoffset: 110;
   stroke-dasharray: 100 10;
   animation: dash 0.5s linear infinite;
+}
+path.edge[data-type="undefined"],
+path.edge[data-type="null"] {
+  stroke: grey;
+}
+path.edge[data-type="number"] {
+}
+path.edge[data-type="array"] {
+}
+path.edge[data-type="object"] {
+}
+path.edge[data-type="string"] {
+}
+path.edge[data-type="function"] {
+}
+path.edge[data-type="promise"] {
+}
+path.edge[data-type="generatorfunction"] {
+}
+path.edge[data-type="regexp"] {
+}
+path.edge[data-type="date"] {
+}
+path.edge[data-type="error"] {
 }
 
 @keyframes dash {
@@ -41,6 +93,7 @@ svg:active {
   cursor: -webkit-grabbing;
 }
 
+text,
 foreignObject {
   user-select: none;
 }

@@ -27,7 +27,6 @@
     "testEnvironment": "node"
   },
   "dependencies": {
-    "patternweb": "^0.0.2",
     "snabbdom": "^0.7.0"
   }
 }
